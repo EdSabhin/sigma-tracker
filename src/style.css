@@ -5,6 +5,7 @@
 html,
 body {
   font-family: "Lato", sans-serif;
+  position: relative;
 }
 
 .tokenGradient {
@@ -28,16 +29,52 @@ body {
 .bgGradient {
   background-image: linear-gradient(
     90deg,
-    hsl(0deg 0% 100%) 0%,
-    hsl(46deg 93% 98%) 33%,
-    hsl(46deg 93% 96%) 51%,
-    hsl(46deg 93% 93%) 64%,
-    hsl(47deg 93% 91%) 73%,
-    hsl(47deg 93% 88%) 80%,
-    hsl(63deg 60% 89%) 86%,
-    hsl(99deg 59% 92%) 90%,
-    hsl(149deg 73% 92%) 94%,
-    hsl(170deg 89% 90%) 97%,
-    hsl(180deg 100% 88%) 100%
+    hsl(30deg 15% 89%) 0%,
+    hsl(31deg 29% 88%) 1%,
+    hsl(33deg 40% 87%) 2%,
+    hsl(34deg 47% 85%) 3%,
+    hsl(35deg 49% 85%) 4%,
+    hsl(33deg 42% 86%) 6%,
+    hsl(32deg 33% 88%) 8%,
+    hsl(30deg 20% 89%) 11%,
+    hsl(30deg 5% 71%) 16%,
+    hsl(30deg 3% 46%) 24%,
+    hsl(30deg 5% 23%) 41%,
+    hsl(0deg 0% 0%) 100%
+  );
+}
+
+.bgGradientTwo {
+  background-image: linear-gradient(
+    90deg,
+    hsl(50deg 10% 11%) 0%,
+    hsl(49deg 20% 33%) 2%,
+    hsl(49deg 28% 55%) 3%,
+    hsl(48deg 38% 77%) 5%,
+    hsl(46deg 47% 84%) 6%,
+    hsl(44deg 55% 61%) 8%,
+    hsl(40deg 64% 39%) 10%,
+    hsl(38deg 73% 17%) 12%,
+    hsl(34deg 64% 9%) 16%,
+    hsl(34deg 47% 7%) 23%,
+    hsl(30deg 33% 5%) 37%,
+    hsl(30deg 14% 3%) 100%
+  );
+}
+
+.modalGradient {
+  background-image: linear-gradient(
+    30deg,
+    hsl(0deg 0% 0%) 0%,
+    hsl(54deg 100% 9%) 18%,
+    hsl(52deg 42% 25%) 30%,
+    hsl(50deg 27% 41%) 39%,
+    hsl(49deg 29% 58%) 46%,
+    hsl(49deg 54% 77%) 50%,
+    hsl(49deg 29% 58%) 53%,
+    hsl(50deg 27% 41%) 57%,
+    hsl(52deg 42% 25%) 62%,
+    hsl(54deg 100% 9%) 73%,
+    hsl(0deg 0% 0%) 100%
   );
 }

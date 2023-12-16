@@ -11,11 +11,10 @@ const { data, error } = useFetch("https://api.coinpaprika.com/v1/tickers");
 watch(data, (current, old) => {
   currencies.value = current;
 });
-
 </script>
 
 <template>
-  <Navbar />
-  <Hero :currencies="currencies" :error="error"/>
-  <Footer />
+    <Navbar />
+    <Hero :currencies="currencies" :error="error" />
+    <Footer />
 </template>
