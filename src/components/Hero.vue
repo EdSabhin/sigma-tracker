@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Currency } from "../models/currency.model";
-import SearchInput from "../components/inputs/SearchInput.vue";
+import SearchInput from "./inputs/SearchInput.vue";
+
 import Token from "./inputs/Token.vue";
 import TokenModal from "./TokenModal.vue";
 import { ref, watch, Ref } from "vue";
