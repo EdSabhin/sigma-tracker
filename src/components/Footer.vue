@@ -2,11 +2,11 @@
 <template>
   <div>
     <footer
-      className="w-full flex justify-center items-start gap-12 p-12 bgGradient "
+      className="w-full flex flex-col lg:flex-row justify-center items-start gap-5 lg:gap-12 px-8 pb-10 lg:p-12 bgGradient "
     >
       <img src="" alt="" />
-      <h2 class="text-2xl text-slate-300">Credits</h2>
-      <ul class="p-4 border-2 border-dashed rounded-md border-orange-100">
+      <h2 class="pb-2 text-2xl text-slate-300">Attributions</h2>
+      <ul class="p-4 border border-dashed rounded-md border-orange-100">
         <li>
           <a
             href="https://api.coinpaprika.com/v1/tickers"

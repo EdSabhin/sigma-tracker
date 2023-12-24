@@ -7,18 +7,24 @@
     >
       <div class="w-full flex justify-center items-center gap-4">
         <div
-          class="w-[15rem] flex items-center gap-4 pl-10 pt-2 pb-6 border-2 border-orange-100 rounded-md tokenGradient"
+          class="lg:w-[25%] flex items-center gap-4 px-4 lg:px-5 pb-3 border-2 border-orange-100 rounded-md tokenGradient"
         >
-          <img src="../assets/gold-icon.png" alt="gold-icon" class="w-10 lg:w-12  " />
-          <h1 class="pt-7 text-xl lg:text-2xl font- text-slate-700"><span class="font-bold">Σ</span>-Tracker</h1>
+          <img
+            src="../assets/gold-icon.png"
+            alt="gold-icon"
+            class="w-10 lg:w-12"
+          />
+          <h1 class="pt-6 text-xl lg:text-2xl font- text-slate-700">
+            <span class="font-bold">Σ</span>-Tracker
+          </h1>
         </div>
       </div>
       <ul
         class="w-full flex justify-center items-start gap-8 pt-8 font-semibold text-slate-300"
       >
-        <li>Cryptocurrencies</li>
-        <li>Exchanges</li>
-        <li>About</li>
+        <li class="hover:text-violet-300 cursor-pointer">Cryptocurrencies</li>
+        <li class="hover:text-violet-300 cursor-pointer">Exchanges</li>
+        <li class="hover:text-violet-300 cursor-pointer">About</li>
       </ul>
     </nav>
   </div>
