@@ -81,9 +81,32 @@ body {
 }
 
 .textGradient {
-  background: linear-gradient(to right, #ff8a00, #e52e71, #3981e5, #00ffcc);
-  -webkit-background-clip: text;
-  color: transparent;
+  background: linear-gradient(
+    to right,
+    #ff8a00,
+    #e52e71,
+    #3981e5,
+    #00ffcc
+  ) !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
 }
 
-
+.spinnerGradient {
+  background-image: linear-gradient(
+    90deg,
+    hsl(49deg 100% 85%) 0%,
+    hsl(48deg 100% 90%) 7%,
+    hsl(48deg 100% 94%) 14%,
+    hsl(47deg 100% 98%) 20%,
+    hsl(47deg 64% 98%) 26%,
+    hsl(47deg 65% 93%) 32%,
+    hsl(48deg 67% 87%) 37%,
+    hsl(49deg 68% 80%) 44%,
+    hsl(48deg 72% 80%) 52%,
+    hsl(48deg 77% 83%) 63%,
+    hsl(47deg 86% 86%) 78%,
+    hsl(46deg 100% 90%) 100%
+  );
+  color: transparent !important;
+}

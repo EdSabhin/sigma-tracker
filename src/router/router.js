@@ -1,8 +1,6 @@
-
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import Bitcoin from '../views/Bitcoin.vue';
-
+import About from "../views/About.vue";
 
 const routes = [
   {
@@ -11,10 +9,10 @@ const routes = [
     component: Home,
   },
   {
-    path: '/btc',
-    name: "Bitcoin",
-    component: Bitcoin
-  }
+    path: "/about",
+    name: "About",
+    component: About,
+  },
 ];
 
 export const router = createRouter({
@@ -22,6 +20,3 @@ export const router = createRouter({
   history: createWebHistory(),
   routes, // short for `routes: routes`
 });
-
-
- 

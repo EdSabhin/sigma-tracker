@@ -42,6 +42,7 @@ const closeModal = () => {
 
 // SEARCH
 const search = ref<string>("");
+const openResults = ref<boolean>(false);
 const handleSearchUpdate = (value: string) => {
   search.value = value;
 };
@@ -64,7 +65,11 @@ function filterSearch() {
 }
 
 const closeSearch = () => {
-  openResults.value = !openResults.value;
+  openResults.value = false;
+};
+
+const openSearch = () => {
+  openResults.value = true;
 };
 
 // PAGINATION
@@ -72,7 +77,6 @@ const currentPage = ref<number>(1);
 const itemsPerPage = ref<number>(24);
 const slicedCurrencies = ref<Currency[]>([]);
 const endPage = ref<boolean>(false);
-const openResults = ref<boolean>(false);
 
 watch(
   () => props.currencies,
@@ -120,25 +124,30 @@ function prevPage() {
 <template>
   <div
     class="w-full lg:px-72 md:px-32 sm:px-12 pb-28 bgGradientTwo border-b-2 border-orange-100"
+    @click="closeSearch"
   >
-    <div class="w-full flex justify-center items-center pb-8 gap-10">
+    <div class="w-full flex justify-center items-center gap-10">
       <div
-        class="w-full h-48 flex flex-col lg:flex-row justify-start items-center relative px-10 lg:px-0 pt-12 lg:pb-0 gap-12 lg:gap-20"
+        class="w-full h-full flex flex-col lg:flex-row justify-start items-center relative px-10 lg:px-0 pt-12 lg:pb-0 gap-12 lg:gap-20"
       >
         <h1
           class="text-3xl text-slate-400 border-t border-l p-4 border-t-rose-400 border-l-rose-600 textGradient rounded-sm"
         >
-          Market Cap Updates  
+          Market Cap Updates
         </h1>
-        <SearchInput :search="search" @update:search="handleSearchUpdate" />
+        <SearchInput
+          :action="openSearch"
+          :search="search"
+          @update:search="handleSearchUpdate"
+        />
         <span
           v-if="search !== '' && !searchResult?.length"
-          class="w-[40%] lg:w-[15%] flex justify-center  absolute top-44 lg:top-[5.44rem] lg:left-[38rem] 2xl:left-[53rem] z-10 overflow-y-auto lg:px-6 py-3 lg:py-2 bg-gradient-to-r from-slate-800 to-slate-900 text-rose-500 border border-rose-500 rounded-md"
+          class="w-max h-[2.7rem] flex justify-center items-center relative bottom-4 lg:absolute lg:top-[3.9rem] lg:left-[44rem] 2xl:left-[53rem] z-10 lg:px-6 py-3 lg:py-2 bg-gradient-to-r from-slate-800 to-slate-900 text-rose-500 border border-rose-500 rounded-md"
           >No results found.
         </span>
         <ul
           v-if="searchResult && searchResult.length && openResults"
-          class="w-[90%] md:w-80 lg:w-80 absolute top-40 lg:top-[4.5rem] lg:left-[38rem] 2xl:left-[53rem] z-10 overflow-y-auto px-6 py-2 bg-slate-950 text-slate-200 border border-violet-300 rounded-md"
+          class="w-[90%] md:w-80 lg:w-80 relative bottom-8 lg:absolute lg:top-[3.9rem] lg:left-[43rem] 2xl:left-[53rem] z-10 overflow-y-auto overflow-x-hidden px-6 py-2 bg-slate-950 text-slate-200 border border-violet-300 rounded-md"
           :class="{
             'h-48': searchResult.length >= 6,
             'h-max': searchResult.length <= 5,
@@ -156,15 +165,26 @@ function prevPage() {
       </div>
     </div>
 
-    <div v-if="error">
-      <span>Fetch Error</span>
-    </div>
-    <div v-else-if="!currencies?.length" class="text-white">
-      <span>Loading...</span>
+    <div
+      v-if="!currencies?.length"
+      class="w-full flex justify-center items-center py-12"
+    >
+      <div
+        class="spinnerGradient h-10 w-10 inline-block animate-spin rounded-full border-[3px] border-current border-t-transparent text-primary-500`"
+        role="status"
+        aria-label="loading"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
     </div>
 
     <div
-      class="w-full grid grid-cols-2 lg:grid-cols-4 gap-12 justify-around px-10 lg:px-0 pt-10 lg:pt-4 pb-20"
+      v-else
+      class="w-full grid grid-cols-2 lg:grid-cols-4 gap-12 justify-around px-10 lg:px-0 lg:pt-10 pb-20"
+      :class="{
+        'pt-8': openResults,
+        'pt-14': !openResults || search === '',
+      }"
     >
       <template v-for="currency in slicedCurrencies" :key="currency?.id">
         <Token :text="currency?.name" :action="() => showModal(currency?.id)" />
@@ -173,6 +193,7 @@ function prevPage() {
 
     <div
       class="w-full flex justify-center pl-10 lg:pl-0 pr-10 lg:pr-10 gap-20 lg:gap-96"
+      v-if="currencies?.length"
     >
       <button
         v-if="currentPage > 1"
@@ -186,7 +207,7 @@ function prevPage() {
         @click="nextPage()"
         class="text-slate-300 justify-center px-[0.45rem] py-2 lg:p-4 border border-violet-300 bg-gradient-to-r from-violet-900 to-slate-900 rounded-md hover:border-orange-300 active:text-orange-400 active:scale-105 hover:transition hover:duration-100"
       >
-        Show More
+        Discover more
       </button>
     </div>
     <template v-if="openModal">

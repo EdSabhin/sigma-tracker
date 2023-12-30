@@ -31,9 +31,9 @@ const USDInfo = USDData && USDData.map(([key, value]) => ({ key, value }));
   >
     <!-- MODAL -->
     <div
-      class="w-full lg:w-[40%] flex flex-col justify-center items-center px-4 py-4 lg:px-6 lg:py-6 text-slate-300 modalGradient rounded-md"
+      class="w-full lg:w-[55%] 2xl:w-[40%] flex flex-col justify-center items-center px-4 py-4 lg:px-6 lg:py-6 text-slate-300 modalGradient rounded-md"
     >
-     <div class="w-full flex flex-col lg:flex-row justify-start relative gap-12 p-4 lg:p-12 bgGradient rounded-md">
+     <div class="w-full h-[550px] lg:h-max flex flex-col lg:flex-row justify-start relative gap-12 p-4 lg:p-12 bgGradient overflow-y-auto rounded-md">
         <span @click="closeModal" class="absolute top-6 right-6 lg:top-8 lg:right-8 px-3 py-1 lg:text-2xl border-2 rounded-full text-teal-300 border-orange-300 hover:border-teal-400 hover:text-orange-400 cursor-pointer transition duration-500 ease-in-out hover:animate-ping"
         >&#119831
         </span>

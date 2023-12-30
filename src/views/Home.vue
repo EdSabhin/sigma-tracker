@@ -14,7 +14,13 @@ watch(data, (current, old) => {
 </script>
 
 <template>
-    <Navbar />
+  <div v-if="error">
+    <span
+      class="w-[50%] lg:w-[20%] h-[2.7rem] flex justify-center items-center relative bottom-4 lg:absolute lg:top-[3.9rem] lg:left-[44rem] 2xl:left-[53rem] z-10 lg:px-6 py-3 lg:py-2 bg-gradient-to-r from-slate-800 to-slate-900 text-rose-500 border border-rose-500 rounded-md"
+      >There was an issue while loading the page. Please refresh.
+    </span>
+  </div>
+  <div v-else class="h-full w-full">
     <Hero :currencies="currencies" :error="error" />
-    <Footer />
+  </div>
 </template>
