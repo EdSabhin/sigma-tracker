@@ -1,28 +1,59 @@
-<script setup></script>
+<script setup>
+const currentYear = new Date().getFullYear();
+</script>
 <template>
   <div>
     <footer
-      className="w-full flex flex-col lg:flex-row justify-center items-start gap-5 lg:gap-12 px-8 pb-10 lg:p-12 bgGradient "
+      class="flex justify-center items-center pt-10 md:pt-8 pb-16 md:pb-10 bg-gradient-to-r from-neutral-700 via-black to-neutral-700 eb-garamond text-slate-200 text-md text-indigo-to-teal"
     >
-      <img src="" alt="" />
-      <h2 class="pb-2 text-2xl text-slate-300">Attributions</h2>
-      <ul class="p-4 border border-dashed rounded-md border-orange-100">
-        <li>
-          <a
-            href="https://api.coinpaprika.com/v1/tickers"
-            class="text-slate-300 hover:text-blue-400"
-            >API by Coin Paprika</a
+      <div
+        class="flex flex-col md:flex-row items-center px-12 xl:px-0 text-center gap-20"
+      >
+        <p class="hover:text-purple-200 hover:underline underline-offset-2 cursor-pointer">
+          <span>Sigma Tracker -</span> Copyright ©
+          {{ currentYear }} - All rights reserved
+        </p>
+        <a
+          href=""
+          target="_blank"
+          class="hover:text-purple-200 hover:underline underline-offset-2 cursor-pointer"
+        >
+          A Project by Ed Sabhin
+        </a>
+        <a
+          href="https://github.com/EdSabhin/sigma-tracker"
+          target="_blank"
+          className="flex items-center gap-4 hover:text-purple-200 cursor- group"
+        >
+          <p
+            class="group-hover:underline underline-offset-2 cursor-pointer"
           >
-        </li>
-        <li>
-          <a
-            href="https://www.flaticon.com/free-icons/gold"
-            title="gold icons"
-            class="text-slate-300 hover:text-blue-400"
-            >Gold icons created by mikan933 - Flaticon</a
+            Code Repository
+          </p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"
           >
-        </li>
-      </ul>
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://api.coinpaprika.com"
+          class="text-slate-300 hover:text-purple-200"
+          >Powered by Coin Paprika API</a
+        >
+      </div>
     </footer>
   </div>
 </template>

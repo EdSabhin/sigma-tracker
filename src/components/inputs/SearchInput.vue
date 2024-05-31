@@ -25,6 +25,6 @@ function updateSearch(event: Event) {
     @focus="action"
     v-model="searchValue"
     @input="updateSearch"
-    class="w-full md:w-[33%] lg:w-[33%] px-3 py-2 text-sm text-slate-700 border-2 border-orange-300 rounded-md focus:outline-none focus:border-purple-500"
+    class="w-full md:w-[33%] lg:w-[33%] px-3 py-2 text-sm text-slate-700 border-2 border-orange-200 rounded-md focus:outline-none focus:border-purple-500"
   />
 </template>

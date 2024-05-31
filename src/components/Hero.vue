@@ -43,6 +43,7 @@ const closeModal = () => {
 // SEARCH
 const search = ref<string>("");
 const openResults = ref<boolean>(false);
+
 const handleSearchUpdate = (value: string) => {
   search.value = value;
 };
@@ -123,7 +124,7 @@ function prevPage() {
 
 <template>
   <div
-    class="w-full lg:px-72 md:px-32 sm:px-12 pb-28 bgGradientTwo border-b-2 border-orange-100"
+    class="w-full lg:px-72 md:px-32 sm:px-12 pb-20 news-cycle-regular leading-8 tracking-widest bg-gradient-to-br from-neutral-600 via-black to-neutral-600 border-b-2 border-orange-100"
     @click="closeSearch"
   >
     <div class="w-full flex justify-center items-center gap-10">
@@ -131,7 +132,7 @@ function prevPage() {
         class="w-full h-full flex flex-col lg:flex-row justify-start items-center relative px-10 lg:px-0 pt-12 lg:pb-0 gap-12 lg:gap-20"
       >
         <h1
-          class="text-3xl text-slate-400 border-t border-l p-4 border-t-rose-400 border-l-rose-600 textGradient rounded-sm"
+          class="text-3xl text-slate-400 border-t border-l p-4 border-t-amber-100 border-l-amber-100 animated-gradient-text rounded-sm"
         >
           Market Cap Updates
         </h1>
@@ -142,7 +143,7 @@ function prevPage() {
         />
         <span
           v-if="search !== '' && !searchResult?.length"
-          class="w-max h-[2.7rem] flex justify-center items-center relative bottom-4 lg:absolute lg:top-[3.9rem] lg:left-[44rem] 2xl:left-[53rem] z-10 lg:px-6 py-3 lg:py-2 bg-gradient-to-r from-slate-800 to-slate-900 text-rose-500 border border-rose-500 rounded-md"
+          class="w-max h-[2.7rem] flex justify-center items-center relative bottom-4 lg:absolute lg:top-[3.9rem] lg:left-[44rem] 2xl:left-[53rem] z-10 lg:px-6 py-3 lg:py-2 bg-gradient-to-tr from-neutral-700 to-neutral-900 text-rose-500 border border-rose-500 rounded-md"
           >No results found.
         </span>
         <ul

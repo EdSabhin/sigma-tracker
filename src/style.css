@@ -8,6 +8,27 @@ body {
   position: relative;
 }
 
+.news-cycle-regular {
+  font-family: "News Cycle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.news-cycle-bold {
+  font-family: "News Cycle", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.eb-garamond {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
 .tokenGradient {
   background-image: linear-gradient(
     90deg,
@@ -80,16 +101,45 @@ body {
   );
 }
 
-.textGradient {
-  background: linear-gradient(
-    to right,
-    #ff8a00,
-    #e52e71,
-    #3981e5,
-    #00ffcc
-  ) !important;
-  -webkit-background-clip: text !important;
-  color: transparent !important;
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-title {
+  background: linear-gradient(270deg, #ac74ff, #ffc5c5, #ac74ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 5s ease infinite;
+}
+.animated-gradient-text {
+  background: linear-gradient(270deg, #fffffe, #ffffa5, #ffffff, #ffffa5);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 2.5s ease infinite;
+}
+.animated-gradient-modal-text {
+  background: linear-gradient(270deg, #ffb026, #a229ff, #ffb026);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 3s ease infinite;
+}
+.animated-gradient-x {
+  background: linear-gradient(270deg, #28C6BA, #ffffa5, #28C6BA);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 3s ease infinite;
 }
 
 .spinnerGradient {
