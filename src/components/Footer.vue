@@ -4,26 +4,26 @@ const currentYear = new Date().getFullYear();
 <template>
   <div>
     <footer
-      class="flex justify-center items-center pt-10 md:pt-8 pb-16 md:pb-10 bg-gradient-to-r from-neutral-700 via-black to-neutral-700 eb-garamond text-slate-200 text-md text-indigo-to-teal"
+      class="flex justify-center items-center pt-10 md:pt-8 pb-16 md:pb-10 bg-gradient-to-r from-neutral-700 via-black to-neutral-700 eb-garamond text-gold-to-purple text-md text-indigo-to-teal"
     >
       <div
         class="flex flex-col md:flex-row items-center px-12 xl:px-0 text-center gap-20"
       >
-        <p class="hover:text-purple-200 hover:underline underline-offset-2 cursor-pointer">
-          <span>Sigma Tracker -</span> Copyright ©
+        <a href="/" class="hover:text-orange-300 hover:underline underline-offset-2 cursor-pointer">
+          <span>SIGMA Tracker -</span> Copyright ©
           {{ currentYear }} - All rights reserved
-        </p>
+        </a>
         <a
-          href=""
+          href="https://edsabhin-project-gallery.netlify.app/"
           target="_blank"
-          class="hover:text-purple-200 hover:underline underline-offset-2 cursor-pointer"
+          class="hover:text-orange-300 hover:underline underline-offset-2 cursor-pointer"
         >
           A Project by Ed Sabhin
         </a>
         <a
           href="https://github.com/EdSabhin/sigma-tracker"
           target="_blank"
-          className="flex items-center gap-4 hover:text-purple-200 cursor- group"
+          className="flex items-center gap-4 hover:text-orange-300 cursor- group"
         >
           <p
             class="group-hover:underline underline-offset-2 cursor-pointer"
@@ -50,7 +50,7 @@ const currentYear = new Date().getFullYear();
         </a>
         <a
           href="https://api.coinpaprika.com"
-          class="text-slate-300 hover:text-purple-200"
+          class="hover:text-orange-300"
           >Powered by Coin Paprika API</a
         >
       </div>

@@ -33,8 +33,8 @@ const USDInfo = USDData && USDData.map(([key, value]) => ({ key, value }));
     <div
      class="w-full xl:w-[50%] 2xl:w-[40%] flex flex-col justify-center items-center px-2 py-2 lg:px-4 lg:py-4 modalGradient rounded-md" 
     >
-     <div class="w-full h-[550px] lg:h-max flex flex-col lg:flex-row justify-start relative gap-12 p-4 lg:p-12 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 overflow-y-auto rounded-md">
-        <span @click="closeModal" class="flex justify-center items-center absolute top-5 right-10 md:top-6 md:right-12 xl:top-8 xl:right-10 md:text-2xl cursor-pointer transition duration-500 ease-in-out animated-gradient-x eb-garamond"
+     <div class="w-full h-[550px] lg:h-max flex flex-col lg:flex-row justify-start relative gap-12 p-6 lg:p-12 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 overflow-y-auto rounded-md scrollbar-hidden">
+        <span @click="closeModal" class="flex justify-center items-center absolute top-6 right-9 md:top-6 md:right-16 lg:top-12 lg:right-20 xl:top-[2.9rem] xl:right-11 2xl:top-12 2xl:right-18 text-3xl cursor-pointer transition duration-500 ease-in-out animated-gradient-x eb-garamond hover:underline underline-offset-8 decoration-1 decoration-teal-100"
         >&#119831
         </span>
         <div class="flex flex-col"><h1 class="pb-3 mb-2 animated-gradient-modal-text eb-garamond text-2xl underline underline-offset-4">{{ singleCurrency?.name.toUpperCase() }}</h1>

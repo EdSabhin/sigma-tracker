@@ -8,6 +8,37 @@ body {
   position: relative;
 }
 
+::selection {
+  background-color: #ffa500;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #ffffff, #ffc155, #ffffff);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+
 .news-cycle-regular {
   font-family: "News Cycle", sans-serif;
   font-weight: 400;
@@ -20,14 +51,12 @@ body {
   font-style: normal;
 }
 
-
 .eb-garamond {
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
 }
-
 
 .tokenGradient {
   background-image: linear-gradient(
@@ -135,11 +164,27 @@ body {
   animation: gradient-animation 3s ease infinite;
 }
 .animated-gradient-x {
-  background: linear-gradient(270deg, #28C6BA, #ffffa5, #28C6BA);
+  background: linear-gradient(270deg, #28c6ba, #ffffa5, #28c6ba);
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient-animation 3s ease infinite;
+}
+
+@keyframes textGoldToPurple {
+  0% {
+    color: #ffffcd;
+  }
+  50% {
+    color: #d1b7ff;
+  }
+  100% {
+    color: #ffffcd;
+  }
+}
+
+.text-gold-to-purple {
+  animation: textGoldToPurple 5s infinite alternate;
 }
 
 .spinnerGradient {

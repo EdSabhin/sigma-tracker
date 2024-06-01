@@ -124,15 +124,15 @@ function prevPage() {
 
 <template>
   <div
-    class="w-full lg:px-72 md:px-32 sm:px-12 pb-20 news-cycle-regular leading-8 tracking-widest bg-gradient-to-br from-neutral-600 via-black to-neutral-600 border-b-2 border-orange-100"
+    class="w-full xl:px-72 lg:px-32 md:px-16 sm:px-12 pb-20 news-cycle-regular leading-8 tracking-widest bg-gradient-to-br from-neutral-600 via-black to-neutral-600 border-b-2 border-orange-100"
     @click="closeSearch"
   >
     <div class="w-full flex justify-center items-center gap-10">
       <div
-        class="w-full h-full flex flex-col lg:flex-row justify-start items-center relative px-10 lg:px-0 pt-12 lg:pb-0 gap-12 lg:gap-20"
+        class="w-full h-full flex flex-col xl:flex-row justify-start items-center relative px-10 lg:px-0 pt-12 mb-6 gap-12 lg:gap-20 2xl:gap-40"
       >
         <h1
-          class="text-3xl text-slate-400 border-t border-l p-4 border-t-amber-100 border-l-amber-100 animated-gradient-text rounded-sm"
+          class="w-full 2xl:w-[71%] text-3xl text-slate-400 border-t border-l p-4 border-t-amber-100 border-l-amber-100 animated-gradient-text rounded-sm"
         >
           Market Cap Updates
         </h1>
@@ -143,12 +143,12 @@ function prevPage() {
         />
         <span
           v-if="search !== '' && !searchResult?.length"
-          class="w-max h-[2.7rem] flex justify-center items-center relative bottom-4 lg:absolute lg:top-[3.9rem] lg:left-[44rem] 2xl:left-[53rem] z-10 lg:px-6 py-3 lg:py-2 bg-gradient-to-tr from-neutral-700 to-neutral-900 text-rose-500 border border-rose-500 rounded-md"
+          class="w-full h-[3rem] flex justify-center items-center relative z-10 bg-gradient-to-tr from-neutral-700 to-neutral-900 text-rose-500 border border-rose-500 rounded-md"
           >No results found.
         </span>
         <ul
           v-if="searchResult && searchResult.length && openResults"
-          class="w-[90%] md:w-80 lg:w-80 relative bottom-8 lg:absolute lg:top-[3.9rem] lg:left-[43rem] 2xl:left-[53rem] z-10 overflow-y-auto overflow-x-hidden px-6 py-2 bg-slate-950 text-slate-200 border border-violet-300 rounded-md"
+          class="w-full xl:w-[21.8rem] relative lg:absolute bottom-12 lg:top-[14.9rem] xl:top-[6.45rem] xl:right-[-0.04rem] 2xl:right-[-0.04rem] z-10 overflow-y-auto overflow-x-hidden px-6 py-2 bg-slate-950 text-slate-200 border border-violet-300 rounded-br rounded-bl scrollbar-hidden"
           :class="{
             'h-48': searchResult.length >= 6,
             'h-max': searchResult.length <= 5,
@@ -181,7 +181,7 @@ function prevPage() {
 
     <div
       v-else
-      class="w-full grid grid-cols-2 lg:grid-cols-4 gap-12 justify-around px-10 lg:px-0 lg:pt-10 pb-20"
+      class="w-full grid grid-cols-2 xl:grid-cols-4 justify-center items-center gap-12 px-10 lg:px-0 lg:pt-10 pb-20"
       :class="{
         'pt-8': openResults,
         'pt-14': !openResults || search === '',
@@ -193,22 +193,22 @@ function prevPage() {
     </div>
 
     <div
-      class="w-full flex justify-center pl-10 lg:pl-0 pr-10 lg:pr-10 gap-20 lg:gap-96"
+      class="w-full flex justify-center gap-[3rem] md:gap-[21rem] lg:gap-[35rem] xl:gap-[40rem] 2xl:gap-[70rem]"
       v-if="currencies?.length"
     >
       <button
         v-if="currentPage > 1"
         @click="prevPage()"
-        class="text-slate-300 justify-center px-[0.4rem] py-2 lg:p-4 border border-violet-300 bg-gradient-to-r from-violet-900 to-slate-900 rounded-md hover:border-orange-300 active:text-orange-400 active:scale-105 hover:transition hover:duration-100"
+        class="w-[7rem] text-slate-300 tracking-widest justify-center px-[1rem] py-2 border border-violet-300 bg-gradient-to-r from-violet-900 to-slate-900 rounded-md hover:border-orange-300 active:text-orange-400 active:scale-105 hover:transition hover:duration-100"
       >
-        Show Previous
+        Previous
       </button>
       <button
         v-if="!endPage"
         @click="nextPage()"
-        class="text-slate-300 justify-center px-[0.45rem] py-2 lg:p-4 border border-violet-300 bg-gradient-to-r from-violet-900 to-slate-900 rounded-md hover:border-orange-300 active:text-orange-400 active:scale-105 hover:transition hover:duration-100"
+        class="w-[7rem] text-slate-300 tracking-widest justify-center px-[1rem] py-2 border border-violet-300 bg-gradient-to-r from-violet-900 to-slate-900 rounded-md hover:border-orange-300 active:text-orange-400 active:scale-105 hover:transition hover:duration-100"
       >
-        Discover more
+        Next
       </button>
     </div>
     <template v-if="openModal">
