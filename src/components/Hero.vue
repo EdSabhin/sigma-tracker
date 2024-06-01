@@ -132,7 +132,7 @@ function prevPage() {
         class="w-full h-full flex flex-col xl:flex-row justify-start items-center relative px-10 lg:px-0 pt-12 mb-6 gap-12 lg:gap-20 2xl:gap-40"
       >
         <h1
-          class="w-full 2xl:w-[71%] text-3xl text-slate-400 border-t border-l p-4 border-t-amber-100 border-l-amber-100 animated-gradient-text rounded-sm"
+          class="w-full 2xl:w-[71%] text-3xl text-slate-400 border-t border-l p-6 border-t-amber-100 border-l-amber-100 animated-gradient-text rounded-sm"
         >
           Market Cap Updates
         </h1>
@@ -171,7 +171,7 @@ function prevPage() {
       class="w-full flex justify-center items-center py-12"
     >
       <div
-        class="spinnerGradient h-10 w-10 inline-block animate-spin rounded-full border-[3px] border-current border-t-transparent text-primary-500`"
+        class="w-10 h-10 spinnerGradient inline-block animate-spin rounded-full border-[3px] border-current border-t-transparent text-primary-500`"
         role="status"
         aria-label="loading"
       >
