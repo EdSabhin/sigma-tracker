@@ -150,11 +150,11 @@ body {
   animation: gradient-animation 5s ease infinite;
 }
 .animated-gradient-text {
-  background: linear-gradient(270deg, #fffffe, #ffffa5, #ffffff, #ffffa5);
+  background: linear-gradient(270deg, #ffffa5, #ffc886, #ffffa5, #ffffa5);
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradient-animation 2.5s ease infinite;
+  animation: gradient-animation 6s ease infinite;
 }
 .animated-gradient-modal-text {
   background: linear-gradient(270deg, #ffb026, #a229ff, #ffb026);

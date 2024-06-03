@@ -124,7 +124,7 @@ function prevPage() {
 
 <template>
   <div
-    class="w-full xl:px-72 lg:px-32 md:px-16 sm:px-12 pb-20 news-cycle-regular leading-8 tracking-widest bg-gradient-to-br from-neutral-600 via-black to-neutral-600 border-b-2 border-orange-100"
+    class="w-full xl:px-72 lg:px-32 md:px-16 sm:px-12 pt-4 pb-20 news-cycle-regular leading-8 tracking-widest bg-gradient-to-br from-neutral-600 via-black to-neutral-600"
     @click="closeSearch"
   >
     <div class="w-full flex justify-center items-center gap-10">

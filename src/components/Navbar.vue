@@ -3,7 +3,7 @@
 <template>
   <div class="w-full">
     <nav
-      class="w-full flex flex-col lg:flex-row justify-center items-center gap-8 py-12 px-14 border-b-2 border-orange-100 bg-gradient-to-r from-neutral-700 via-black to-neutral-700"
+      class="w-full flex flex-col lg:flex-row justify-center items-center gap-8 py-14 px-14 bg-gradient-to-r from-neutral-700 via-black to-neutral-700"
     >
       <div class="w-full flex justify-center items-center gap-12">
         <a href="/">
