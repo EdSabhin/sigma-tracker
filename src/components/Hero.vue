@@ -148,7 +148,7 @@ function prevPage() {
         </span>
         <ul
           v-if="searchResult && searchResult.length && openResults"
-          class="w-full xl:w-[21.8rem] relative lg:absolute bottom-12 lg:top-[14.9rem] xl:top-[6.45rem] xl:right-[-0.04rem] 2xl:right-[-0.04rem] z-10 overflow-y-auto overflow-x-hidden px-6 py-2 bg-slate-950 text-slate-200 border border-violet-300 rounded-br rounded-bl scrollbar-hidden"
+          class="w-full xl:w-[20.3rem] relative lg:absolute bottom-12 lg:top-[15.8rem] xl:top-[6.9rem] xl:right-[-0.04rem] 2xl:top-[6.75rem] z-10 overflow-y-auto overflow-x-hidden px-6 py-2 bg-slate-950 text-slate-200 border border-violet-300 rounded-br rounded-bl scrollbar-hidden"
           :class="{
             'h-48': searchResult.length >= 6,
             'h-max': searchResult.length <= 5,
